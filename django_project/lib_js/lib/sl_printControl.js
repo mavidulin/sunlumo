@@ -208,7 +208,10 @@ SL_PrintControl.prototype = {
         // Add Drag interaction for PrintControl Features to map.
         this.map.addInteraction(new Drag(this));
 
-        m.module(document.getElementById('panelPrint'), {controller: PrintControl.controller, view: PrintControl.view});
+
+        this.PrintControler = PrintControl.controller;
+        this.PrintView = PrintControl.view;
+        //m.module(document.getElementById('panelPrint'), {controller: PrintControl.controller, view: PrintControl.view});
     },
 
     _handleEvents: function() {
